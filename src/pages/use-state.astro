@@ -1,0 +1,20 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import PresentationLayout from '../layouts/PresentationLayout.astro';
+
+import Profile from '../components/app/profile/Profile'
+import UseStateSlides from '../content/use-state.md';
+---
+
+<MainLayout title='Frontend Techniques in the Realm of Hyrule with React '>
+  <PresentationLayout
+    title='useState'
+    previousPageTitle={null}
+    previousPageUrl={null}
+    nextPageTitle='useReducer'
+    nextPageUrl='./use-reducer'
+  >
+    <Profile slot='app' client:load/>
+    <UseStateSlides slot='slides' />
+  </PresentationLayout>
+</MainLayout>

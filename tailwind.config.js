@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    colors: {
+    
+    extend: {
+      colors: {
       'hyrule-green': '#14532d',
     },
-    extend: {},
+    },
   },
   plugins: [],
 };
