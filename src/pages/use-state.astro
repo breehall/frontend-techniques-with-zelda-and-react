@@ -2,6 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import PresentationLayout from '../layouts/PresentationLayout.astro';
 
+import Profile from '../components/app/profile/Profile'
 import UseStateSlides from '../content/use-state.md';
 ---
 
@@ -13,6 +14,7 @@ import UseStateSlides from '../content/use-state.md';
     nextPageTitle='useReducer'
     nextPageUrl='./use-reducer'
   >
+    <Profile slot='app' client:load/>
     <UseStateSlides slot='slides' />
   </PresentationLayout>
 </MainLayout>
