@@ -2,6 +2,7 @@ export type PostProps = {
   postId: number;
   username: string;
   name: string;
+  avatar: string;
   age: string;
   content: string;
   likes: number;
@@ -13,6 +14,7 @@ const Post = ({
   postId,
   username,
   name,
+  avatar,
   age,
   content,
   likes,
@@ -24,7 +26,13 @@ const Post = ({
       id={`post-${postId}`}
       className="flex flex-col p-4 pb-4 mb-3 border-2 border-stone-100 rounded-xl gap-4"
     >
-      <PostHeader name={name} username={username} age={age} content={content} />
+      <PostHeader
+        name={name}
+        username={username}
+        age={age}
+        avatar={avatar}
+        content={content}
+      />
 
       <div className="flex justify-around">
         <PostInteractionButton
@@ -51,11 +59,17 @@ const Post = ({
 };
 
 /** POST COMPONENTS  */
-const PostHeader = ({ name, username, age, content }: Partial<PostProps>) => {
+const PostHeader = ({
+  name,
+  username,
+  avatar,
+  age,
+  content,
+}: Partial<PostProps>) => {
   return (
     <div className="flex flex-row gap-x-4">
       <img
-        src="https://assetsio.gnwcdn.com/tears-of-the-kingdom-selfie-1.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp"
+        src={avatar}
         alt={`${name}'s profile picture`}
         className="w-12 h-12 rounded-full"
       />

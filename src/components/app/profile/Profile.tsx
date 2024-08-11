@@ -1,67 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import TriforceTap from "./TriforceTap";
 import Post from "../Post";
-import type { PostProps } from "../Post";
-
-//import TriforceTap from './TriforceTap';
-
-const link_posts: Array<PostProps> = [
-  {
-    postId: 1,
-    username: "link",
-    name: "Link",
-    age: "2m",
-    content:
-      "Just found another Korok seed! These little guys are everywhere! 🌱 #HyruleAdventures #KorokHunt",
-    likes: 0,
-    comments: 0,
-    saves: 0,
-  },
-  {
-    postId: 2,
-    username: "link",
-    name: "Link",
-    age: "1h",
-    content:
-      "Cooking up some mighty meals today. Anyone got a good recipe for Dubious Food? 🍲 #CookingWithLink",
-    likes: 0,
-    comments: 0,
-    saves: 0,
-  },
-  {
-    postId: 4,
-    username: "link",
-    name: "Link",
-    age: "5h",
-    content:
-      "Stumbled upon an ancient shrine. The puzzles in these never get old! 🧩 #ShrineSeeker #ZeldaPuzzleMaster",
-    likes: 0,
-    comments: 0,
-    saves: 0,
-  },
-  {
-    postId: 5,
-    username: "link",
-    name: "Link",
-    age: "2d",
-    content:
-      "Finally upgraded my armor! Feeling invincible now. 💪 #ArmorUpgrade #HyruleWarrior",
-    likes: 0,
-    comments: 0,
-    saves: 0,
-  },
-  {
-    postId: 6,
-    username: "link",
-    name: "Link",
-    age: "07/22/2024",
-    content:
-      "Defeated Ganon again. When will he learn? #HeroOfHyrule #NeverGiveUp",
-    likes: 0,
-    comments: 0,
-    saves: 0,
-  },
-];
+import { LINK_PROFILE_POSTS } from "../../../pages/api/posts";
 
 const LinkProfileCoverImage =
   "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/hyrule-castle-in-the-legend-of-zelda-tears-of-the-kingdom.jpg";
@@ -69,18 +9,8 @@ const LinkProfileAvatar =
   "https://assetsio.gnwcdn.com/tears-of-the-kingdom-selfie-1.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp";
 
 const Profile = () => {
-  const [posts, setPosts] = useState(link_posts);
+  const [posts, setPosts] = useState(LINK_PROFILE_POSTS);
   const [triforceTapWithCoolDown, setTriforceTapWithCoolDown] = useState(false);
-
-  //   useEffect(() => {
-  //     const fetchPosts = async () => {
-  //       const response = await fetch('http://localhost:4322/api/posts');
-  //       const data = await response.json();
-  //       setPosts(data.data);
-  //     };
-
-  //     fetchPosts();
-  //   }, []);
 
   return (
     <section id="profile">
@@ -152,8 +82,6 @@ const ProfileInfo = () => {
       <p className="mt-0 text-stone-500">
         <i className="lni lni-map-marker"></i> Hyrule
       </p>
-
-      {/* <TriforceTap /> */}
     </div>
   );
 };
