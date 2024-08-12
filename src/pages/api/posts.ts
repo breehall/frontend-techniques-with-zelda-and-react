@@ -194,3 +194,40 @@ export const FEED_POSTS: Array<PostProps> = [
     saves: 20,
   },
 ];
+
+export const FEED_POST_COMMENTS = [
+  {
+    commentId: 1,
+    username: "link",
+    avatar: IMAGE_TO_CHAT_MAP["link"],
+    name: "Link",
+    datePosted: "2024-07-04",
+    content: "You won't succeed, Ganondorf. We'll always protect Hyrule!",
+  },
+  {
+    commentId: 2,
+    username: "zelda",
+    avatar: IMAGE_TO_CHAT_MAP["zelda"],
+    name: "Zelda",
+    datePosted: "2024-07-04",
+    content:
+      "Your plans will fail, Ganondorf. The power of the Triforce will stop you.",
+  },
+  {
+    commentId: 4,
+    username: "daruk_goron",
+    avatar: IMAGE_TO_CHAT_MAP["daruk"],
+    name: "Daruk",
+    datePosted: "2024-07-04",
+    content: "Bring it on, Ganondorf! We Gorons are ready for any challenge!",
+  },
+  {
+    commentId: 5,
+    username: "revali_the_great",
+    avatar: IMAGE_TO_CHAT_MAP["revali"],
+    name: "Revali",
+    datePosted: "2024-07-04",
+    content:
+      "Ha! Your next move will be your last, Ganondorf. We are prepared.",
+  },
+];

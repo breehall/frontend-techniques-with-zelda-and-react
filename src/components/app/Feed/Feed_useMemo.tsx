@@ -7,7 +7,7 @@ import { FEED_POSTS } from "../../../pages/api/posts";
 
 const Feed = () => {
   const [feedPosts, setFeedPosts] = useState<PostProps[]>(FEED_POSTS);
-  const [selectedButton, setSelectedButton] = useState("Most Recent");
+  const [selectedButton, setSelectedButton] = useState("Most Comments");
   const [_, forceUpdate] = useState(0); // State variable to trigger re-renders
 
   /**

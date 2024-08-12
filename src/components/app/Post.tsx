@@ -1,3 +1,7 @@
+import { useState, lazy, Suspense, type ComponentType } from "react";
+
+import { FEED_POST_COMMENTS } from "../../pages/api/posts";
+
 export type PostProps = {
   postId: number;
   username: string;
@@ -26,6 +30,45 @@ const Post = ({
   onLike,
 }: PostProps) => {
   console.log(`Post ${postId} Rendered`);
+
+  const [showComments, setShowComments] = useState(false);
+  const [commentList, setCommentList] = useState(FEED_POST_COMMENTS);
+
+  // Show and hide comments on click
+  const handleCommentsClick = () => {
+    setShowComments(!showComments);
+  };
+
+  // Lazy load the comments component with an artificial delay
+  const lazyWithDelay = (
+    importFunc: any,
+    delay: number,
+  ): Promise<{ default: ComponentType<any> }> => {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(importFunc()), delay);
+    });
+  };
+
+  // Lazy load the comments component
+  const PostComment = lazy(() =>
+    lazyWithDelay(() => import("./Comment"), 2000),
+  );
+
+  const Loading = () => (
+    <div>
+      <div className="animate-pulse flex space-x-4">
+        <div className="rounded-full bg-gray-300 h-12 w-12"></div>
+        <div className="flex-1 space-y-4 py-1">
+          <div className="space-y-2">
+            <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+            <div className="h-4 bg-gray-300 rounded"></div>
+            <div className="h-4 bg-gray-300 rounded w-5/6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <article
       id={`post-${postId}`}
@@ -53,6 +96,7 @@ const Post = ({
           count={saves}
           label={`Comment on post with ${comments} comments`}
           postId={postId}
+          onClick={handleCommentsClick}
         />
         <PostInteractionButton
           icon="bookmark"
@@ -61,6 +105,32 @@ const Post = ({
           postId={postId}
         />
       </div>
+
+      {/* 
+        Lazy load the comments component with an artificial delay
+        and show the loading component with the Suspense component
+        while the comments are loading
+       */}
+      {showComments && (
+        <Suspense fallback={<Loading />}>
+          {commentList.map((comment) => (
+            <PostComment
+              key={comment.commentId}
+              commentId={comment.commentId}
+              username={comment.username}
+              avatar={comment.avatar}
+              name={comment.name}
+              datePosted={comment.datePosted}
+              content={comment.content}
+            />
+          ))}
+          {commentList.length < comments && (
+            <button className="p-3 w-full text-gray-500">
+              See more comments
+            </button>
+          )}
+        </Suspense>
+      )}
     </article>
   );
 };
