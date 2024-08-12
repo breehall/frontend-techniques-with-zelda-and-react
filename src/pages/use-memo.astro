@@ -3,18 +3,18 @@ import MainLayout from '../layouts/MainLayout.astro';
 import PresentationLayout from '../layouts/PresentationLayout.astro';
 
 import Profile from '../components/app/profile/Profile'
-import UseStateSlides from '../content/slides/use-state.md';
+import UseMemoSlides from '../content/slides/use-memo.md';
 ---
 
 <MainLayout title='Frontend Techniques in the Realm of Hyrule with React '>
   <PresentationLayout
-    title='useState'
-    previousPageTitle={null}
-    previousPageUrl={null}
-    nextPageTitle='useReducer'
-    nextPageUrl='./use-reducer'
+    title='useMemo'
+    previousPageTitle='useContext'
+    previousPageUrl='./use-context'
+    nextPageTitle='useCallback'
+    nextPageUrl='./use-callback'
   >
     <Profile slot='app' client:load/>
-    <UseStateSlides slot='slides' />
+    <UseMemoSlides slot='slides' />
   </PresentationLayout>
 </MainLayout>

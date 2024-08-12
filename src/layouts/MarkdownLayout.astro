@@ -1,12 +1,13 @@
 ---
 const { frontmatter } = Astro.props;
-
-// import '../../src/styles/markdown.css';
 ---
 
 <html>
-  <!-- <h1>{frontmatter.title}</h1>
-  <h2>Post author: {frontmatter.author}</h2>
-  <p>{frontmatter.description}</p> -->
   <slot />
 </html>
+
+<style>
+  #slides-display h2{
+    font-size: 2rem;
+  }
+</style>

@@ -1,21 +1,10 @@
----
-layout: ../layouts/MarkdownLayout.astro
-# nextPageLink: use-reducer.md
-# nextPageTitle: useReducer
-# title: Astro in brief
-# author: Himanshu
-# description: Find out what makes Astro awesome!
----
-
-## What is `useState`?
+## 1. What is `useState`?
 
 `useState` is the hook that allows you to manage local state within your React components
 
-```tsx
+```jsx
 const [count, setCount] = useState(0);
 ```
-
-<hr/>
 
 ## Use Cases
 
@@ -28,18 +17,19 @@ const [count, setCount] = useState(0);
 - Tracking user interactions (like click or hover)
 - Storing small, local state values
 
+<hr/>
 
-## Maintaining simple, local state
+## 2. Maintaining simple, local state
 
 ### Creating a basic counter with `useState`
 
 - Accepts: the default value for the state
 - Returns: the state and set function to update the state
 
-```tsx
+```jsx
 // TriforceTap.tsx
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const TriforceTap = () => {
   const [totalTriforceTaps, setTotalTriforceTaps] = useState(0);
@@ -53,21 +43,23 @@ const TriforceTap = () => {
   return (
     <div>
       <p>{totalTriforceTaps}</p>
-      <button onClick={handleTap} disabled={!allowSelfTap}> Tap </button>
+      <button onClick={handleTap} disabled={!allowSelfTap}>
+        {" "}
+        Tap{" "}
+      </button>
     </div>
   );
 };
 ```
 
-
 ## Update state based on the previous state
 
 ### Pass a function that will calculate the next state from the pending state
 
-```tsx
+```jsx
 // TriforceTap.tsx
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const TriforceTap = () => {
   const [totalTriforceTaps, setTotalTriforceTaps] = useState(0);
@@ -155,16 +147,11 @@ useEffect(() => {
 }, [state.coolDown]);
 ```
 
-
+<hr />
 
 ## 🛑 Don't use `useState` if:
-- eif
-- hello
+
 - Managing global state
 - Noticing frequent updates / re-renders and those are causing performance issues
 - Reusing the same state logic across multiple components
 - State is dependent on many fields or sub-fields
-
-
-
-
