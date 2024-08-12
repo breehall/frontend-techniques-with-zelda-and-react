@@ -1,7 +1,89 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <MainLayout title='Frontend Techniques in the Realm of Hyrule with React '>
- <h1> Hello World</h1>
+  <BaseLayout
+    title='Welcome to a React Quest ⚛️ ⚔️'
+    previousPageTitle={null}
+    previousPageUrl={null}
+    nextPageTitle='useState'
+    nextPageUrl='./use-state'
+  >
+    <div class='align-middle text-center'>
+        <p class='font-bold italic'>🚧 This site is still a work-in-progress. Please bear with me as I update demos and content.🚧 </p>
+      <p>
+        👋🏾 Welcome to Frontend Techniques in the Realm of Hyrule with React!
+        Here, you'll find the notes that accompany that talk given by
+        <a href='https://tiktok.com/@bytesofbree'>Bree</a> at <a
+          href='https://thatconference.com'>THAT Conference</a
+        > during the summer of 2024. This is a beginner friendly presentation on
+        React hooks and dynamic content loading with a fun, Zelda-inspired twist. It’s all about mixing code with creativity,
+        so get ready to explore and learn in a way that’s both practical and exciting!
+        Please enjoy!
+      </p>
+      <hr />
+      <h3>Contents</h3>
+      <nav>
+        <ul>
+            <li><a href='./use-state'>1. useState</a></li>
+            <li><a href='./use-reducer'>2. useReducer</a></li>
+            <li><a href='./use-context'>3. useContext</a></li>
+            <li><a href='./use-effect'>4. useEffect</a></li>
+            <li><a href='./use-memo'>5. useMemo</a></li>
+            <li><a href='./use-callback'>6. useCallback</a></li>
+            <li><a href='./code-splitting'>7. Code Splitting</a></li>
+        </ul>
+      </nav>
+      <hr />
+      <p>
+        <strong>Please note:</strong> I do not own the rights to any of the Zelda-related content used in this presentation. I'm just a fan who wanted to share some React knowledge in a fun way. 🎮
+      </p>
+    </div>
+  </BaseLayout>
 </MainLayout>
+
+<style>
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding-bottom: 0.5rem;
+  }
+
+  a {
+    @apply bg-hyrule-green;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.25rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+
+    }
+    li a{
+       background-color: #fff;
+       color: black;
+       font-weight: normal;
+       font-size: 1.25rem;
+    }
+</style>

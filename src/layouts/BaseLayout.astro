@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  previousPageUrl: string | null;
+  previousPageTitle: string | null;
+  nextPageUrl: string | null;
+  nextPageTitle: string | null;
+}
+
+const {
+  title,
+  previousPageUrl,
+  previousPageTitle,
+  nextPageUrl,
+  nextPageTitle,
+} = Astro.props;
+
+import { NavButton } from '../components/NavButton.tsx';
+
+---
+
+<section id='presentation'>
+  <div class='w-full flex justify-between items-center px-8 mb-3'>
+    <div class='flex-1'>
+      {previousPageUrl && previousPageTitle && (
+        <NavButton
+          path={previousPageUrl}
+          title={previousPageTitle}
+          isNextPage={false}
+        />
+      )}
+    </div>
+    <h2 class='text-2xl font-bold text-center flex-1'>{title}</h2>
+    <div class='flex-1 text-right'>
+      {nextPageUrl && nextPageTitle && (
+        <NavButton path={nextPageUrl} title={nextPageTitle} isNextPage={true} />
+      )}
+    </div>
+  </div>
+
+  <div class='p-4 w-full px-10'>
+    <slot />
+  </div>
+</section>
