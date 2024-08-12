@@ -1,54 +1,34 @@
-# Astro Starter Kit: Basics
+# ⚛️ Frontend Techniques in the Realm of Hyrule with React
 
-```sh
-npm create astro@latest -- --template basics
+## 👋🏾 About this Project
+
+Welcome to Frontend Techniques in the Realm of Hyrule with React! Here, you'll find the notes that accompany that talk given by [Bree Hall](https://tiktok.com/@bytesofbree) (that's me!) at [THAT Conference Wisconsin](https://thatconference.com) during the summer of 2024.
+
+This is a beginner friendly presentation on React hooks and dynamic content loading with a fun, Zelda-inspired twist. It’s all about mixing code with creativity, and learning by finding parallels in coding and your passions.
+
+➡️ Check out a [live demo]() of the demo app and presentation slides
+
+Interesting in viewing the presentation? Click the thumbnail below to watch it on YouTube! 👇🏾
+
+[![Bree Hall's YouTube thumbnail for the recorded presentation of Frontend Techniques in the Realm of Hyrule with React](public/youtube_thumbnail.png)](https://youtu.be/-_LioxAeCSU)
+
+🚧 This was the first talk I've had the opportunity and pleasure of presenting at a conference and am already working on the next iteration of this talk. **_Please bear with me as I work to build this repo with documentation and examples._** 😊
+
+## 🧰 Getting Started
+
+Once you've cloned this repo, follow these steps to get started with the project:
+
+1. **Install dependencies:**
+
+```
+ npm install
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. **Start your development server:**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. **Open the app:**
+   Open your browser and navigate to [localhost:4321/use-state](http://localhost:4321/use-state) to start the presentation.
