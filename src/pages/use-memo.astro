@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import PresentationLayout from '../layouts/PresentationLayout.astro';
 
-import Profile from '../components/app/profile/Profile'
+import Feed from '../components/app/Feed/Feed_useMemo'
 import UseMemoSlides from '../content/slides/use-memo.md';
 ---
 
@@ -14,7 +14,7 @@ import UseMemoSlides from '../content/slides/use-memo.md';
     nextPageTitle='useCallback'
     nextPageUrl='./use-callback'
   >
-    <Profile slot='app' client:load/>
+    <Feed slot='app' client:load/>
     <UseMemoSlides slot='slides' />
   </PresentationLayout>
 </MainLayout>
