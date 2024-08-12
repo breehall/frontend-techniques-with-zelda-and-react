@@ -6,7 +6,7 @@ Welcome to Frontend Techniques in the Realm of Hyrule with React! Here, you'll f
 
 This is a beginner friendly presentation on React hooks and dynamic content loading with a fun, Zelda-inspired twist. It’s all about mixing code with creativity, and learning by finding parallels in coding and your passions.
 
-➡️ Check out a [live demo]() of the demo app and presentation slides
+➡️ Check out a [live demo](https://frontend-techniques-with-zelda-and-react.vercel.app/use-state) of the demo app and presentation slides
 
 Interesting in viewing the presentation? Click the thumbnail below to watch it on YouTube! 👇🏾
 
