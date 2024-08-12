@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import PresentationLayout from '../layouts/PresentationLayout.astro';
 
-import Profile from '../components/app/profile/Profile'
+import AdventureLog from '../components/app/AdventureLog/AdventureLog'
 import UseReducerSlides from '../content/slides/use-reducer.md';
 ---
 
@@ -14,7 +14,7 @@ import UseReducerSlides from '../content/slides/use-reducer.md';
     nextPageTitle='useContext'
     nextPageUrl='./use-context'
   >
-    <Profile slot='app' client:load/>
+    <AdventureLog slot='app' client:load/>
     <UseReducerSlides slot='slides' />
   </PresentationLayout>
 </MainLayout>

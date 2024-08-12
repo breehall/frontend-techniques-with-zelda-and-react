@@ -45,6 +45,8 @@ const Feed = () => {
 
 ![Without useCallback](/feed_without_usecallback.gif)
 
+<hr />
+
 ## 4. Handling likes with `useCallback`
 
 **Expected Logs:**

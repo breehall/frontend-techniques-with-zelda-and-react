@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import PresentationLayout from '../layouts/PresentationLayout.astro';
 
-import Profile from '../components/app/profile/Profile'
+import Feed from '../components/app/Feed/Feed_useCallback'
 import UseCallbackSlides from '../content/slides/use-callback.md';
 ---
 
@@ -14,7 +14,7 @@ import UseCallbackSlides from '../content/slides/use-callback.md';
     nextPageTitle='Code Splitting'
     nextPageUrl='./code-splitting'
   >
-    <Profile slot='app' client:load/>
+    <Feed slot='app' client:load/>
     <UseCallbackSlides slot='slides' />
   </PresentationLayout>
 </MainLayout>
