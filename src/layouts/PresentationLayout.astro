@@ -16,6 +16,8 @@ const {
 } = Astro.props;
 
 import { NavButton } from '../components/NavButton.tsx';
+
+import '../styles/markdown.css';
 ---
 
 <section id='presentation'>
@@ -46,23 +48,9 @@ import { NavButton } from '../components/NavButton.tsx';
     </div>
     <div
       id='slides-display'
-      class='flex-1 p-4 lg:w-2/3 bg-stone-100 rounded-lg shadow-md'
+      class='flex-1 lg:w-2/3 p-4 m-2 bg-stone-100 rounded-lg shadow-md'
     >
       <slot name='slides' />
     </div>
   </div>
 </section>
-
-<style>
-  #app-display,
-  #slides-display {
-    @apply m-2;
-  }
-
-  #app-display {
-    /* background-color: red; */
-  }
-
-  #slides-display {
-  }
-</style>
