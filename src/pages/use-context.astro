@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import PresentationLayout from '../layouts/PresentationLayout.astro';
 
-import Profile from '../components/app/profile/Profile'
+import LoginComponent from '../components/app/Login/Login';
 import UseContextSlides from '../content/slides/use-context.md';
 ---
 
@@ -14,7 +14,7 @@ import UseContextSlides from '../content/slides/use-context.md';
     nextPageTitle='useMemo'
     nextPageUrl='./use-memo'
   >
-    <Profile slot='app' client:load/>
+    <LoginComponent slot='app' client:load />
     <UseContextSlides slot='slides' />
   </PresentationLayout>
 </MainLayout>
