@@ -25,6 +25,7 @@ const Post = ({
   saves,
   onLike,
 }: PostProps) => {
+  console.log(`Post ${postId} Rendered`);
   return (
     <article
       id={`post-${postId}`}
